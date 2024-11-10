@@ -1,10 +1,11 @@
 import './App.css';
+import Calculator from './calculator';
 
 function App() {
   return (
     <>
       <div>
-        Learit react
+        <Calculator></Calculator>
       </div>
     </>
   );
