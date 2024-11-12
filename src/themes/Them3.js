@@ -1,6 +1,47 @@
+import { evaluate } from "mathjs"
+import { useState } from "react"
 
-function Theme3({onToggle}) {
+function Theme3({ onToggle }) {
+    let [result, setResult] = useState('')
+    let [hasDot, setHasDot] = useState(false)
 
+    let operators = ['+', '-', '*', '/']
+
+    const checkInput = (text) => {
+        if (text === '×') return '*'
+        if (text === '÷') return '/'
+        return text
+    }
+
+    const clickHandler = (e) => {
+        let input = checkInput(e.target.innerText);
+        if (input === '.') {
+            if (hasDot === true) return
+            else setHasDot(true)
+        }
+
+        if (operators.includes(input)) {
+            setHasDot(false)
+        }
+
+        setResult(result + input)
+    }
+
+    const backSpaseBtn = () => {
+        if (result.endsWith('.'))
+            setHasDot(false)
+        setResult(result.slice(0, -1))
+    }
+
+    const clearBtn = () => {
+        setResult('')
+        setHasDot(false)
+    }
+
+    const equalBtn = () => {
+        setResult(String(evaluate(result)))
+        setHasDot(false)
+    }
 
     return (
         <div className="bg-[#160629] theme" id="theme3">
@@ -24,7 +65,7 @@ function Theme3({onToggle}) {
                                     {/* <!-- Toggle Ball --> */}
                                     <div id="toggle-ball"
                                         className="bg-[#00d9d2] w-3 h-3 rounded-full transform transition-transform duration-300 cursor-pointer"
-                                        style={{transform: "translateX(40px)"}} 
+                                        style={{ transform: "translateX(40px)" }}
                                         onClick={onToggle}></div>
                                 </div>
                             </div>
@@ -33,110 +74,112 @@ function Theme3({onToggle}) {
                     {/* <!-- Display the result --> */}
                     <div className="flex flex-col">
                         <div className="rounded-md overflow-hidden">
-                            <input
-                                className="bg-[#1e0836] flex flex-row-reverse p-6 text-[#ffe540] text-4xl w-[22.5rem] font-mono"
-                                dir="rtl" type="text" id="result3" disabled />
+                            <div
+                                className="bg-[#1e0836] flex flex-row-reverse p-6 text-[#ffe540] p-6 text-4xl w-[22.5rem] h-20 text-right leading-10"
+                                type="text" id="result3" disabled>
+                                {result}
+                            </div>
                         </div>
                     </div>
 
-                    {/* <!-- Buttons --> */}
-                    <div className=" bg-[#1e0836] rounded-md mt-4">
-                        <div className="grid grid-cols-4 gap-4 p-4">
-                            <button
-                                className="bg-[#331b4d] text-[#ffe540] hover:bg-[#6933ab] rounded-md text-center w-[4.5rem] h-10 grid place-items-center"
-                                style={{ boxShadow: "#87209e 0px 3px"}} onclick="appendToResult3('7')">
-                                7
-                            </button>
-                            <button
-                                className="bg-[#331b4d] text-[#ffe540] hover:bg-[#6933ab] rounded-md text-center w-[4.5rem] h-10 grid place-items-center"
-                                style={{boxShadow: "#87209e 0px 3px"}} onclick="appendToResult3('8')">
-                                8
-                            </button>
-                            <button
-                                className="bg-[#331b4d] text-[#ffe540] hover:bg-[#6933ab] rounded-md text-center w-[4.5rem] h-10 grid place-items-center"
-                                style={{boxShadow: "#87209e 0px 3px"}} onclick="appendToResult3('9')">
-                                9
-                            </button>
-                            <button
-                                className="bg-[#58077d] text-white hover:bg-[#8131b0] rounded-md text-center w-[4.5rem] h-10 grid place-items-center"
-                                style={{boxShadow: "#bd16f5 0px 3px"}} onclick="clearResult3()">
-                                Del
-                            </button>
-                            <button
-                                className="bg-[#331b4d] text-[#ffe540] hover:bg-[#6933ab] rounded-md text-center w-[4.5rem] h-10 grid place-items-center"
-                                style={{boxShadow: "#87209e 0px 3px"}} onclick="appendToResult3('4')">
-                                4
-                            </button>
-                            <button
-                                className="bg-[#331b4d] text-[#ffe540] hover:bg-[#6933ab] rounded-md text-center w-[4.5rem] h-10 grid place-items-center"
-                                style={{boxShadow: "#87209e 0px 3px"}} onclick="appendToResult3('5')">
-                                5
-                            </button>
-                            <button
-                                className="bg-[#331b4d] text-[#ffe540] hover:bg-[#6933ab] rounded-md text-center w-[4.5rem] h-10 grid place-items-center"
-                                style={{boxShadow: "#87209e 0px 3px"}} onclick="appendToResult3('6')">
-                                6
-                            </button>
-                            <button
-                                className="bg-[#331b4d] text-[#ffe540] hover:bg-[#6933ab] rounded-md text-center w-[4.5rem] h-10 grid place-items-center"
-                                style={{boxShadow: "#87209e 0px 3px"}} onclick="appendToResult3('+')">
-                                +
-                            </button>
-                            <button
-                                className="bg-[#331b4d] text-[#ffe540] hover:bg-[#6933ab] rounded-md text-center w-[4.5rem] h-10 grid place-items-center"
-                                style={{boxShadow: "#87209e 0px 3px"}} onclick="appendToResult3('1')">
-                                1
-                            </button>
-                            <button
-                                className="bg-[#331b4d] text-[#ffe540] hover:bg-[#6933ab] rounded-md text-center w-[4.5rem] h-10 grid place-items-center"
-                                style={{boxShadow: "#87209e 0px 3px"}} onclick="appendToResult3('2')">
-                                2
-                            </button>
-                            <button
-                                className="bg-[#331b4d] text-[#ffe540] hover:bg-[#6933ab] rounded-md text-center w-[4.5rem] h-10 grid place-items-center"
-                                style={{boxShadow: "#87209e 0px 3px"}} onclick="appendToResult3('-')">
-                                3
-                            </button>
-                            <button
-                                className="bg-[#331b4d] text-[#ffe540] hover:bg-[#6933ab] rounded-md text-center w-[4.5rem] h-10 grid place-items-center"
-                                style={{boxShadow: "#87209e 0px 3px"}} onclick="appendToResult3('-')">
-                                -
-                            </button>
-                            <button
-                                className="bg-[#331b4d] text-[#ffe540] hover:bg-[#6933ab] rounded-md text-center w-[4.5rem] h-10 grid place-items-center"
-                                style={{boxShadow: "#87209e 0px 3px"}} onclick="appendToResult3('.')">
-                                .
-                            </button>
-                            <button
-                                className="bg-[#331b4d] text-[#ffe540] hover:bg-[#6933ab] rounded-md text-center w-[4.5rem] h-10 grid place-items-center"
-                                style={{boxShadow: "#87209e 0px 3px"}} onclick="appendToResult3('0')">
-                                0
-                            </button>
-                            <button
-                                className="bg-[#331b4d] text-[#ffe540] hover:bg-[#6933ab] rounded-md text-center w-[4.5rem] h-10 grid place-items-center"
-                                style={{boxShadow: "#87209e 0px 3px"}} onclick="appendToResult3('/')">
-                                /
-                            </button>
-                            <button
-                                className="bg-[#331b4d] text-[#ffe540] hover:bg-[#6933ab] rounded-md text-center w-[4.5rem] h-10 grid place-items-center"
-                                style={{boxShadow: "#87209e 0px 3px"}} onclick="appendToResult3('*')">
-                                *
-                            </button>
-                            <button
-                                className="bg-[#58077d] text-white hover:bg-[#8131b0] rounded-md text-center col-span-2 h-10 grid place-items-center"
-                                style={{boxShadow: "#bd16f5 0px 3px"}} onclick="calculateResult3()">
-                                Result
-                            </button>
-                            <button
-                                className="bg-[#00decf] text-white hover:bg-[#94fffa] rounded-md text-center col-span-2 h-10 grid place-items-center"
-                                style={{boxShadow: "#6efaf1 0px 3px"}} onclick="calculateResult3()">
-                                =
-                            </button>
-                        </div>
+                {/* <!-- Buttons --> */}
+                <div className=" bg-[#1e0836] rounded-md mt-4">
+                    <div className="grid grid-cols-4 gap-4 p-4">
+                        <button
+                            className="bg-[#331b4d] text-[#ffe540] hover:bg-[#6933ab] rounded-md text-center w-[4.5rem] h-10 grid place-items-center"
+                            style={{ boxShadow: "#87209e 0px 3px" }} onClick={clickHandler}>
+                            7
+                        </button>
+                        <button
+                            className="bg-[#331b4d] text-[#ffe540] hover:bg-[#6933ab] rounded-md text-center w-[4.5rem] h-10 grid place-items-center"
+                            style={{ boxShadow: "#87209e 0px 3px" }} onClick={clickHandler}>
+                            8
+                        </button>
+                        <button
+                            className="bg-[#331b4d] text-[#ffe540] hover:bg-[#6933ab] rounded-md text-center w-[4.5rem] h-10 grid place-items-center"
+                            style={{ boxShadow: "#87209e 0px 3px" }} onClick={clickHandler}>
+                            9
+                        </button>
+                        <button
+                            className="bg-[#58077d] text-white hover:bg-[#8131b0] rounded-md text-center w-[4.5rem] h-10 grid place-items-center"
+                            style={{ boxShadow: "#bd16f5 0px 3px" }} onClick={backSpaseBtn}>
+                            C
+                        </button>
+                        <button
+                            className="bg-[#331b4d] text-[#ffe540] hover:bg-[#6933ab] rounded-md text-center w-[4.5rem] h-10 grid place-items-center"
+                            style={{ boxShadow: "#87209e 0px 3px" }} onClick={clickHandler}>
+                            4
+                        </button>
+                        <button
+                            className="bg-[#331b4d] text-[#ffe540] hover:bg-[#6933ab] rounded-md text-center w-[4.5rem] h-10 grid place-items-center"
+                            style={{ boxShadow: "#87209e 0px 3px" }} onClick={clickHandler}>
+                            5
+                        </button>
+                        <button
+                            className="bg-[#331b4d] text-[#ffe540] hover:bg-[#6933ab] rounded-md text-center w-[4.5rem] h-10 grid place-items-center"
+                            style={{ boxShadow: "#87209e 0px 3px" }} onClick={clickHandler}>
+                            6
+                        </button>
+                        <button
+                            className="bg-[#331b4d] text-[#ffe540] hover:bg-[#6933ab] rounded-md text-center w-[4.5rem] h-10 grid place-items-center"
+                            style={{ boxShadow: "#87209e 0px 3px" }} onClick={clickHandler}>
+                            +
+                        </button>
+                        <button
+                            className="bg-[#331b4d] text-[#ffe540] hover:bg-[#6933ab] rounded-md text-center w-[4.5rem] h-10 grid place-items-center"
+                            style={{ boxShadow: "#87209e 0px 3px" }} onClick={clickHandler}>
+                            1
+                        </button>
+                        <button
+                            className="bg-[#331b4d] text-[#ffe540] hover:bg-[#6933ab] rounded-md text-center w-[4.5rem] h-10 grid place-items-center"
+                            style={{ boxShadow: "#87209e 0px 3px" }} onClick={clickHandler}>
+                            2
+                        </button>
+                        <button
+                            className="bg-[#331b4d] text-[#ffe540] hover:bg-[#6933ab] rounded-md text-center w-[4.5rem] h-10 grid place-items-center"
+                            style={{ boxShadow: "#87209e 0px 3px" }} onClick={clickHandler}>
+                            3
+                        </button>
+                        <button
+                            className="bg-[#331b4d] text-[#ffe540] hover:bg-[#6933ab] rounded-md text-center w-[4.5rem] h-10 grid place-items-center"
+                            style={{ boxShadow: "#87209e 0px 3px" }} onClick={clickHandler}>
+                            -
+                        </button>
+                        <button
+                            className="bg-[#331b4d] text-[#ffe540] hover:bg-[#6933ab] rounded-md text-center w-[4.5rem] h-10 grid place-items-center"
+                            style={{ boxShadow: "#87209e 0px 3px" }} onClick={clickHandler}>
+                            .
+                        </button>
+                        <button
+                            className="bg-[#331b4d] text-[#ffe540] hover:bg-[#6933ab] rounded-md text-center w-[4.5rem] h-10 grid place-items-center"
+                            style={{ boxShadow: "#87209e 0px 3px" }} onClick={clickHandler}>
+                            0
+                        </button>
+                        <button
+                            className="bg-[#331b4d] text-[#ffe540] hover:bg-[#6933ab] rounded-md text-center w-[4.5rem] h-10 grid place-items-center"
+                            style={{ boxShadow: "#87209e 0px 3px" }} onClick={clickHandler}>
+                            ÷
+                        </button>
+                        <button
+                            className="bg-[#331b4d] text-[#ffe540] hover:bg-[#6933ab] rounded-md text-center w-[4.5rem] h-10 grid place-items-center"
+                            style={{ boxShadow: "#87209e 0px 3px" }} onClick={clickHandler}>
+                            ×
+                        </button>
+                        <button
+                            className="bg-[#58077d] text-white hover:bg-[#8131b0] rounded-md text-center col-span-2 h-10 grid place-items-center"
+                            style={{ boxShadow: "#bd16f5 0px 3px" }} onClick={clearBtn}>
+                            Clear
+                        </button>
+                        <button
+                            className="bg-[#00decf] text-white hover:bg-[#94fffa] rounded-md text-center col-span-2 h-10 grid place-items-center"
+                            style={{ boxShadow: "#6efaf1 0px 3px" }} onClick={equalBtn}>
+                            =
+                        </button>
                     </div>
                 </div>
             </div>
         </div>
+</div>
     );
 }
 
