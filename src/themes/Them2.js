@@ -1,9 +1,9 @@
 
-function Theme2() {
+function Theme2({onToggle }) {
 
 
     return (
-        <div classNameName="bg-[#e6e6e6] theme hidden" id="theme2">
+        <div className="bg-[#e6e6e6] theme" id="theme2">
             <div className="flex justify-center items-center min-h-screen font-bold text-2xl text-[#fcfffd]">
                 <div className="w-[26%] h-96">
                     <div className="flex justify-between items-center p-5">
@@ -22,9 +22,10 @@ function Theme2() {
                                 </div>
                                 <div className="bg-[#d6cecf] rounded-full p-1 relative flex items-center w-16 h-5">
                                     {/* <!-- Toggle Ball --> */}
-                                    <div id="toggle-ball"
+                                    <button id="toggle-ball"
                                         className="bg-[#c75300] w-3 h-3 mr-10 rounded-full transform transition-transform duration-300 cursor-pointer"
-                                        style={{ transform: "translateX(20px)" }} itemID="toggle-ball-2"></div>
+                                        style={{ transform: "translateX(20px)" }} 
+                                        onClick={onToggle}></button>
                                 </div>
                             </div>
                         </div>
@@ -32,7 +33,7 @@ function Theme2() {
                     {/* <!-- Display the result --> */}
                     <div className="flex flex-col">
                         <div className="rounded-md overflow-hidden">
-                            <input className="bg-[#d4cdcd] flex flex-row-reverse p-6 text-black text-4xl w-[22.5rem] font-mono"
+                            <input className="bg-[#efebeb] flex flex-row-reverse p-6 text-black text-4xl w-[22.5rem] font-mono"
                                 dir="rtl" type="text" id="result2" disabled />
                         </div>
                     </div>

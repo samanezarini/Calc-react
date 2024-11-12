@@ -1,5 +1,5 @@
 
-function Theme3() {
+function Theme3({onToggle}) {
 
 
     return (
@@ -24,7 +24,8 @@ function Theme3() {
                                     {/* <!-- Toggle Ball --> */}
                                     <div id="toggle-ball"
                                         className="bg-[#00d9d2] w-3 h-3 rounded-full transform transition-transform duration-300 cursor-pointer"
-                                        style={{transform: "translateX(40px)"}} itemID="toggle-ball-3"></div>
+                                        style={{transform: "translateX(40px)"}} 
+                                        onClick={onToggle}></div>
                                 </div>
                             </div>
                         </div>

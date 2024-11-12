@@ -1,7 +1,7 @@
 import { evaluate } from "mathjs";
 import { useState } from "react";
 
-function Theme1() {
+function Theme1({onToggle }) {
     let [result, setResult] = useState('')
     let [hasDot, setHasDot] = useState(false)
 
@@ -64,13 +64,13 @@ function Theme1() {
                                 </div>
                                 <div className="bg-gray-800 rounded-full p-1 relative flex items-center w-16 h-5">
                                     {/* <!-- Toggle Ball --> */}
-                                    <div
+                                    <button
                                         className="bg-red-400 w-3 h-3 rounded-full transform transition-transform duration-300 cursor-pointer" 
                                     id="toggle-ball"
                                     style={{ transform: "translateX(0)" }}
-                                    itemID="toggle-ball-1"
+                                    onClick={onToggle}
                                     >
-                                </div>
+                                </button>
                             </div>
                         </div>
                     </div>
