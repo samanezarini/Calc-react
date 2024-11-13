@@ -50,7 +50,7 @@ function Theme1({ onToggle }) {
                 <div>
                     <div className="flex justify-between items-center mb-3 px-2 w-72 h-10 lg:w-[22.5rem] lg:h-10 md:w-[22.5rem] md:h-10">
                         <div className="text-white text-xl">calc</div>
-                        <div classNae="flex items-center ml-16 h-10">
+                        <div className="flex items-center">
                             <span className="text-white mr-4 mt-3 text-xs">THEME</span>
                             <div className="flex flex-col">
                                 <div className="flex space-x-3 ml-2">
@@ -59,12 +59,10 @@ function Theme1({ onToggle }) {
                                     <span className="text-white text-xs">3</span>
                                 </div>
                                 <div className="bg-gray-800 rounded-full p-1 relative flex items-center w-16 h-5">
-                                    <button
-                                        className="bg-red-400 w-3 h-3 rounded-full transform transition-transform duration-300 cursor-pointer"
-                                        id="toggle-ball"
-                                        style={{ transform: "translateX(0)" }}
-                                        onClick={onToggle}
-                                    >
+                                    <button id="toggle-ball"
+                                        className="bg-red-400 w-3 h-3 mr-10 rounded-full transform transition-transform duration-300 cursor-pointer"
+                                        style={{ transform: "translateX(0px)" }}
+                                        onClick={onToggle}>
                                     </button>
                                 </div>
                             </div>
