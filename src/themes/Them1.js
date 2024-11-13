@@ -45,25 +45,20 @@ function Theme1({ onToggle }) {
     }
 
     return (
-        <main className="bg-[#3a4764]">
+        <div className="bg-[#3a4764]">
             <div className="flex justify-center items-center min-h-screen font-bold text-2xl text-[#fcfffd]">
                 <div>
                     <div className="flex justify-between items-center mb-3 px-2 w-72 h-10 lg:w-[22.5rem] lg:h-10 md:w-[22.5rem] md:h-10">
-                        {/* <!-- Title --> */}
                         <div className="text-white text-xl">calc</div>
-
-                        {/* <!-- Theme Toggle Button 1 --> */}
-                        <div className="flex items-center ml-16 h-10">
+                        <div classNae="flex items-center ml-16 h-10">
                             <span className="text-white mr-4 mt-3 text-xs">THEME</span>
                             <div className="flex flex-col">
                                 <div className="flex space-x-3 ml-2">
-                                    {/* <!-- Numbers 1, 2, 3 --> */}
                                     <span className="text-white text-xs">1</span>
                                     <span className="text-white text-xs">2</span>
                                     <span className="text-white text-xs">3</span>
                                 </div>
                                 <div className="bg-gray-800 rounded-full p-1 relative flex items-center w-16 h-5">
-                                    {/* <!-- Toggle Ball --> */}
                                     <button
                                         className="bg-red-400 w-3 h-3 rounded-full transform transition-transform duration-300 cursor-pointer"
                                         id="toggle-ball"
@@ -75,7 +70,8 @@ function Theme1({ onToggle }) {
                             </div>
                         </div>
                     </div>
-                    {/* <!-- Display the result --> */}
+
+                    {/* Display the result */}
                     <div className="flex flex-col">
                         <div className="rounded-md overflow-hidden w-72 lg:w-[22rem] md:w-[22rem]">
                             <div
@@ -88,7 +84,8 @@ function Theme1({ onToggle }) {
                             </div>
                         </div>
                     </div>
-                    {/* <!-- Buttons --> */}
+
+                    {/* Buttons */}
                     <div className=" bg-[#182033] rounded-md mt-4 w-72 lg:w-[22rem] md:w-[22rem]">
                         <div className="grid grid-cols-4 gap-4 p-4 place-items-center lg:w-[22rem] md:w-[22rem]">
                             <button
@@ -220,7 +217,7 @@ function Theme1({ onToggle }) {
                     </div>
                 </div>
             </div>
-        </main >
+        </div>
     )
 }
 export default Theme1
