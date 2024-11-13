@@ -44,10 +44,10 @@ function Theme3({ onToggle }) {
     }
 
     return (
-        <div className="bg-[#160629] theme" id="theme3">
+        <div className="bg-[#160629]">
             <div className="flex justify-center items-center min-h-screen font-bold text-2xl text-[#fcfffd]">
-                <div className="w-[26%] h-96">
-                    <div className="flex justify-between items-center p-5">
+                <div>
+                    <div className="flex justify-between items-center mb-3 px-2 w-72 h-10 lg:w-[22.5rem] lg:h-10 md:w-[22.5rem] md:h-10">
                         {/* <!-- Logo or Title --> */}
                         <div className="text-[#ffe540] text-xl">calc</div>
 
@@ -73,9 +73,9 @@ function Theme3({ onToggle }) {
                     </div>
                     {/* <!-- Display the result --> */}
                     <div className="flex flex-col">
-                        <div className="rounded-md overflow-hidden">
+                        <div className="rounded-md overflow-hidden w-72 lg:w-[22rem] md:w-[22rem]">
                             <div
-                                className="bg-[#1e0836] flex flex-row-reverse text-[#ffe540] p-6 text-4xl w-[22.5rem] h-20 text-right leading-10"
+                                className="bg-[#1e0836] flex flex-row-reverse text-[#ffe540] p-6 text-4xl h-20 lg:w-full lg:h-20 text-right leading-10"
                                 type="text" id="result3" disabled>
                                 {result}
                             </div>
@@ -83,95 +83,95 @@ function Theme3({ onToggle }) {
                     </div>
 
                 {/* <!-- Buttons --> */}
-                <div className=" bg-[#1e0836] rounded-md mt-4">
-                    <div className="grid grid-cols-4 gap-4 p-4">
+                <div className=" bg-[#1e0836] rounded-md mt-4 w-72 lg:w-[22rem] md:w-[22rem]">
+                    <div className="grid grid-cols-4 gap-4 p-4 w-72 lg:w-[22rem] md:w-[22rem]">
                         <button
-                            className="bg-[#331b4d] text-[#ffe540] hover:bg-[#6933ab] rounded-md text-center w-[4.5rem] h-10 grid place-items-center"
+                            className="bg-[#331b4d] text-[#ffe540] hover:bg-[#6933ab] rounded-md text-center leading-10 w-14 h:10 lg:w-[4.5rem] lg:h-10 md:w-[4.5rem] md:h-10 grid"
                             style={{ boxShadow: "#87209e 0px 3px" }} onClick={clickHandler}>
                             7
                         </button>
                         <button
-                            className="bg-[#331b4d] text-[#ffe540] hover:bg-[#6933ab] rounded-md text-center w-[4.5rem] h-10 grid place-items-center"
+                            className="bg-[#331b4d] text-[#ffe540] hover:bg-[#6933ab] rounded-md text-center leading-10 w-14 h:10 lg:w-[4.5rem] lg:h-10 md:w-[4.5rem] md:h-10 grid"
                             style={{ boxShadow: "#87209e 0px 3px" }} onClick={clickHandler}>
                             8
                         </button>
                         <button
-                            className="bg-[#331b4d] text-[#ffe540] hover:bg-[#6933ab] rounded-md text-center w-[4.5rem] h-10 grid place-items-center"
+                            className="bg-[#331b4d] text-[#ffe540] hover:bg-[#6933ab] rounded-md text-center leading-10 w-14 h:10 lg:w-[4.5rem] lg:h-10 md:w-[4.5rem] md:h-10 grid"
                             style={{ boxShadow: "#87209e 0px 3px" }} onClick={clickHandler}>
                             9
                         </button>
                         <button
-                            className="bg-[#58077d] text-white hover:bg-[#8131b0] rounded-md text-center w-[4.5rem] h-10 grid place-items-center"
+                            className="bg-[#58077d] text-white hover:bg-[#8131b0] rounded-md text-center leading-10 w-14 h:10 lg:w-[4.5rem] lg:h-10 md:w-[4.5rem] md:h-10 grid"
                             style={{ boxShadow: "#bd16f5 0px 3px" }} onClick={backSpaseBtn}>
                             C
                         </button>
                         <button
-                            className="bg-[#331b4d] text-[#ffe540] hover:bg-[#6933ab] rounded-md text-center w-[4.5rem] h-10 grid place-items-center"
+                            className="bg-[#331b4d] text-[#ffe540] hover:bg-[#6933ab] rounded-md text-center leading-10 w-14 h:10 lg:w-[4.5rem] lg:h-10 md:w-[4.5rem] md:h-10 grid"
                             style={{ boxShadow: "#87209e 0px 3px" }} onClick={clickHandler}>
                             4
                         </button>
                         <button
-                            className="bg-[#331b4d] text-[#ffe540] hover:bg-[#6933ab] rounded-md text-center w-[4.5rem] h-10 grid place-items-center"
+                            className="bg-[#331b4d] text-[#ffe540] hover:bg-[#6933ab] rounded-md text-center leading-10 w-14 h:10 lg:w-[4.5rem] lg:h-10 md:w-[4.5rem] md:h-10 grid"
                             style={{ boxShadow: "#87209e 0px 3px" }} onClick={clickHandler}>
                             5
                         </button>
                         <button
-                            className="bg-[#331b4d] text-[#ffe540] hover:bg-[#6933ab] rounded-md text-center w-[4.5rem] h-10 grid place-items-center"
+                            className="bg-[#331b4d] text-[#ffe540] hover:bg-[#6933ab] rounded-md text-center leading-10 w-14 h:10 lg:w-[4.5rem] lg:h-10 md:w-[4.5rem] md:h-10 grid"
                             style={{ boxShadow: "#87209e 0px 3px" }} onClick={clickHandler}>
                             6
                         </button>
                         <button
-                            className="bg-[#331b4d] text-[#ffe540] hover:bg-[#6933ab] rounded-md text-center w-[4.5rem] h-10 grid place-items-center"
+                            className="bg-[#331b4d] text-[#ffe540] hover:bg-[#6933ab] rounded-md text-center leading-10 w-14 h:10 lg:w-[4.5rem] lg:h-10 md:w-[4.5rem] md:h-10 grid"
                             style={{ boxShadow: "#87209e 0px 3px" }} onClick={clickHandler}>
                             +
                         </button>
                         <button
-                            className="bg-[#331b4d] text-[#ffe540] hover:bg-[#6933ab] rounded-md text-center w-[4.5rem] h-10 grid place-items-center"
+                            className="bg-[#331b4d] text-[#ffe540] hover:bg-[#6933ab] rounded-md text-center leading-10 w-14 h:10 lg:w-[4.5rem] lg:h-10 md:w-[4.5rem] md:h-10 grid"
                             style={{ boxShadow: "#87209e 0px 3px" }} onClick={clickHandler}>
                             1
                         </button>
                         <button
-                            className="bg-[#331b4d] text-[#ffe540] hover:bg-[#6933ab] rounded-md text-center w-[4.5rem] h-10 grid place-items-center"
+                            className="bg-[#331b4d] text-[#ffe540] hover:bg-[#6933ab] rounded-md text-center leading-10 w-14 h:10 lg:w-[4.5rem] lg:h-10 md:w-[4.5rem] md:h-10 grid"
                             style={{ boxShadow: "#87209e 0px 3px" }} onClick={clickHandler}>
                             2
                         </button>
                         <button
-                            className="bg-[#331b4d] text-[#ffe540] hover:bg-[#6933ab] rounded-md text-center w-[4.5rem] h-10 grid place-items-center"
+                            className="bg-[#331b4d] text-[#ffe540] hover:bg-[#6933ab] rounded-md text-center leading-10 w-14 h:10 lg:w-[4.5rem] lg:h-10 md:w-[4.5rem] md:h-10 grid"
                             style={{ boxShadow: "#87209e 0px 3px" }} onClick={clickHandler}>
                             3
                         </button>
                         <button
-                            className="bg-[#331b4d] text-[#ffe540] hover:bg-[#6933ab] rounded-md text-center w-[4.5rem] h-10 grid place-items-center"
+                            className="bg-[#331b4d] text-[#ffe540] hover:bg-[#6933ab] rounded-md text-center leading-10 w-14 h:10 lg:w-[4.5rem] lg:h-10 md:w-[4.5rem] md:h-10 grid"
                             style={{ boxShadow: "#87209e 0px 3px" }} onClick={clickHandler}>
                             -
                         </button>
                         <button
-                            className="bg-[#331b4d] text-[#ffe540] hover:bg-[#6933ab] rounded-md text-center w-[4.5rem] h-10 grid place-items-center"
+                            className="bg-[#331b4d] text-[#ffe540] hover:bg-[#6933ab] rounded-md text-center leading-10 w-14 h:10 lg:w-[4.5rem] lg:h-10 md:w-[4.5rem] md:h-10 grid"
                             style={{ boxShadow: "#87209e 0px 3px" }} onClick={clickHandler}>
                             .
                         </button>
                         <button
-                            className="bg-[#331b4d] text-[#ffe540] hover:bg-[#6933ab] rounded-md text-center w-[4.5rem] h-10 grid place-items-center"
+                            className="bg-[#331b4d] text-[#ffe540] hover:bg-[#6933ab] rounded-md text-center leading-10 w-14 h:10 lg:w-[4.5rem] lg:h-10 md:w-[4.5rem] md:h-10 grid"
                             style={{ boxShadow: "#87209e 0px 3px" }} onClick={clickHandler}>
                             0
                         </button>
                         <button
-                            className="bg-[#331b4d] text-[#ffe540] hover:bg-[#6933ab] rounded-md text-center w-[4.5rem] h-10 grid place-items-center"
+                            className="bg-[#331b4d] text-[#ffe540] hover:bg-[#6933ab] rounded-md text-center leading-10 w-14 h:10 lg:w-[4.5rem] lg:h-10 md:w-[4.5rem] md:h-10 grid"
                             style={{ boxShadow: "#87209e 0px 3px" }} onClick={clickHandler}>
                             ÷
                         </button>
                         <button
-                            className="bg-[#331b4d] text-[#ffe540] hover:bg-[#6933ab] rounded-md text-center w-[4.5rem] h-10 grid place-items-center"
+                            className="bg-[#331b4d] text-[#ffe540] hover:bg-[#6933ab] rounded-md text-center leading-10 w-14 h:10 lg:w-[4.5rem] lg:h-10 md:w-[4.5rem] md:h-10 grid"
                             style={{ boxShadow: "#87209e 0px 3px" }} onClick={clickHandler}>
                             ×
                         </button>
                         <button
-                            className="bg-[#58077d] text-white hover:bg-[#8131b0] rounded-md text-center col-span-2 h-10 grid place-items-center"
+                            className="bg-[#58077d] text-white hover:bg-[#8131b0] rounded-md text-center col-span-2 h-10 grid leading-10"
                             style={{ boxShadow: "#bd16f5 0px 3px" }} onClick={clearBtn}>
                             Clear
                         </button>
                         <button
-                            className="bg-[#00decf] text-white hover:bg-[#94fffa] rounded-md text-center col-span-2 h-10 grid place-items-center"
+                            className="bg-[#00decf] text-white hover:bg-[#94fffa] rounded-md text-center col-span-2 h-10 grid leading-10"
                             style={{ boxShadow: "#6efaf1 0px 3px" }} onClick={equalBtn}>
                             =
                         </button>
