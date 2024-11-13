@@ -44,7 +44,6 @@ function Theme1({ onToggle }) {
         setHasDot(false)
     }
 
-
     return (
         <main className="bg-[#3a4764]">
             <div className="flex justify-center items-center min-h-screen font-bold text-2xl text-[#fcfffd]">
@@ -80,7 +79,7 @@ function Theme1({ onToggle }) {
                     <div className="flex flex-col">
                         <div className="rounded-md overflow-hidden w-72 lg:w-[22rem] md:w-[22rem]">
                             <div
-                                className="bg-[#182033] flex flex-row-reverse p-6 text-4xl h-20  lg:w-full lg:h-20 text-right leading-10"
+                                className="bg-[#182033] flex flex-row-reverse p-6 text-4xl h-20 lg:w-full lg:h-20 text-right leading-10"
                                 type="text"
                                 id="result1"
                                 disabled
@@ -204,14 +203,14 @@ function Theme1({ onToggle }) {
                                 ×
                             </button>
                             <button
-                                className="bg-[#637199] text-white hover:bg-[#a2b2e0] leading-10 rounded-md text-center col-span-2 w-32 h-10 lg:w-40 lg:h-10 md:w-40 md:h-10"
+                                className="bg-[#637199] text-white hover:bg-[#a2b2e0] leading-10 rounded-md text-center col-span-2 w-32 h-10 lg:w-40 lg:h-10 md:w-40 md:h-10 grid"
                                 style={{ boxShadow: "#414d6e 0px 3px" }}
                                 onClick={clearBtn}
                             >
                                 Clear
                             </button>
                             <button
-                                className="bg-[#d14030] text-[#464b5c] hover:bg-[#fa6c5c] leading-10 rounded-md text-center col-span-2 w-32 h-10 lg:w-40 lg:h-10 md:w-40 md:h-10"
+                                className="bg-[#d14030] text-[#464b5c] hover:bg-[#fa6c5c] leading-10 rounded-md text-center col-span-2 w-32 h-10 lg:w-40 lg:h-10 md:w-40 md:h-10 grid"
                                 style={{ boxShadow: "#942519 0px 3px" }}
                                 onClick={equalBtn}
                             >
