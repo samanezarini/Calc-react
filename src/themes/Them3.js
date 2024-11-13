@@ -75,7 +75,7 @@ function Theme3({ onToggle }) {
                     <div className="flex flex-col">
                         <div className="rounded-md overflow-hidden">
                             <div
-                                className="bg-[#1e0836] flex flex-row-reverse p-6 text-[#ffe540] p-6 text-4xl w-[22.5rem] h-20 text-right leading-10"
+                                className="bg-[#1e0836] flex flex-row-reverse text-[#ffe540] p-6 text-4xl w-[22.5rem] h-20 text-right leading-10"
                                 type="text" id="result3" disabled>
                                 {result}
                             </div>
