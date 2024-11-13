@@ -76,7 +76,7 @@ function Theme2({ onToggle }) {
                     <div className="flex flex-col">
                         <div className="rounded-md overflow-hidden">
                             <div
-                                className="bg-[#efebeb] flex flex-row-reverse text-[#36362b] p-6 text-4xl w-[22.5rem] h-20 text-right leading-10"
+                                className="bg-[#d4cdcd] flex flex-row-reverse text-[#36362b] p-6 text-4xl w-[22.5rem] h-20 text-right leading-10"
                                 type="text"
                                 id="result1"
                                 disabled>
