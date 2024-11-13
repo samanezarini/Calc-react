@@ -46,9 +46,9 @@ function Theme1({ onToggle }) {
 
 
     return (
-        <main className="bg-[#3a4764] theme" id="theme1">
+        <main className="bg-[#3a4764]">
             <div className="flex justify-center items-center min-h-screen font-bold text-2xl text-[#fcfffd]">
-                <div className="w-[26%] h-96">
+                <div>
                     <div className="flex justify-between items-center mb-3 px-2 w-72 h-10 lg:w-[22.5rem] lg:h-10 md:w-[22.5rem] md:h-10">
                         {/* <!-- Title --> */}
                         <div className="text-white text-xl">calc</div>
