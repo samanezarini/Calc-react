@@ -49,7 +49,7 @@ function Theme2({ onToggle }) {
             <div className="flex justify-center items-center min-h-screen font-bold text-2xl text-[#fcfffd]">
                 <div>
                     <div className="flex justify-between items-center mb-3 px-2 w-72 h-10 lg:w-[22.5rem] lg:h-10 md:w-[22.5rem] md:h-10">
-                        <div className="text-gray-950 text-xl">calc</div>
+                        <div className="text-gray-950 text-xl mt-3">calculator</div>
                         <div className="flex items-center">
                             <span className="text-gray-950 mr-4 mt-3 text-xs">THEME</span>
                             <div className="flex flex-col">

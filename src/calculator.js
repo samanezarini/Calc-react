@@ -13,7 +13,7 @@ function Calculator() {
   return (
     <div className="relative">
     <div
-      className={`absolute top-0 left-0 w-full h-full transition-all duration-500 ${
+      className={`absolute top-0 left-0 w-full h-full transition-all duration-700 ${
         activeTheme === 1 ? "opacity-100 z-10" : "opacity-0 z-0"
       }`}
     >
@@ -21,15 +21,15 @@ function Calculator() {
     </div>
 
     <div
-      className={`absolute top-0 left-0 w-full h-full transition-all duration-500 ${
-        activeTheme == 2 ? "opacity-100 z-10" : "opacity-0 z-0"
+      className={`absolute top-0 left-0 w-full h-full transition-all duration-700 ${
+        activeTheme === 2 ? "opacity-100 z-10" : "opacity-0 z-0"
       }`}
     >
       <Theme2 onToggle={() => handleThemeChange(3)} />
     </div>
 
     <div
-      className={`absolute top-0 left-0 w-full h-full transition-all duration-500 ${
+      className={`absolute top-0 left-0 w-full h-full transition-all duration-700 ${
         activeTheme === 3 ? "opacity-100 z-10" : "opacity-0 z-0"
       }`}
     >
