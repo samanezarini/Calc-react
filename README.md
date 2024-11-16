@@ -82,4 +82,4 @@ Feel free to check the [issues page](https://github.com/your-username/your-proje
 - Email: samane_zarini@yahoo.com
 - GitHub: [@samanezarini](https://github.com/samanezarini)
 
-Thank you for your participation and valuable companionship
+Thank you for your participation and valuable companionship 🎈💐
