@@ -1,6 +1,8 @@
 # Calculator program
 This app helps you to do your math calculations with it. It is made with three different themes. I hope you enjoy it. Read the following for more information. Thank you for your cooperation.
 
+![Design preview for the Calculator app coding challenge](./src/themes/desktop-preview.jpg)
+
 ## 🌟 Overview
 Project is an advanced task management tool designed to help individuals and teams stay organized. With real-time collaboration, powerful analytics and a user-friendly interface, this is the only tool you need!
 
@@ -9,7 +11,7 @@ This program helps you to:
 - You can perform mathematical operations such as addition, subtraction, multiplication and division
 - Change the color theme based on your preference.
 
-![Design preview for the Calculator app coding challenge](./src/themes/desktop-preview.jpg)
+
 
 ## 🚀 Installation
 
