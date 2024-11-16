@@ -46,3 +46,38 @@ This program helps you to:
 - 👥 Collaboration in real time
 - 📊 Check the entered numbers and data
 - 🌙 Three color themes, light, dark, medium
+
+
+## My process
+
+### Built with
+
+- Semantic HTML5 markup
+- CSS Tailwand properties
+- Flexbox
+- CSS Grid
+- Mobile-first workflow
+- [React](https://reactjs.org/) - JS library
+- [Styled Components](https://styled-components.com/) - For styles
+
+## 🤝 Contributing
+Contributions, issues, and feature requests are welcome!  
+Feel free to check the [issues page](https://github.com/your-username/your-project/issues).
+
+1. Fork the repository
+2. Create your feature branch:
+   ```bash
+   git checkout -b feature/your-feature-name
+3. Commit your changes:
+   ```bash 
+   git commit -m "Add your feature"
+
+4. Push to the branch:
+   ```bash
+   git push origin feature/your-feature-name
+
+## 📬 Contact
+- Email: samane_zarini@yahoo.com
+- GitHub: [@samanezarini](https://github.com/samanezarini)
+
+Thank you for your participation and valuable companionship
